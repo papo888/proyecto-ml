@@ -1,12 +1,5 @@
+from src.features.clean import clean_columns
 import pandas as pd
-
-# -----------------------------
-# Limpieza básica
-# -----------------------------
-def clean_columns(df):
-    df.columns = df.columns.str.strip()
-    return df
-
 
 # -----------------------------
 # Agrupación de géneros
@@ -53,7 +46,6 @@ def agrupar_genero(g):
 
 
 def apply_genre_grouping(df):
-    df['genre'] = df['genre'].str.strip()
     df['genre_grouped'] = df['genre'].apply(agrupar_genero)
     return df
 
@@ -62,8 +54,7 @@ def apply_genre_grouping(df):
 # Filtrado opcional
 # -----------------------------
 def remove_unwanted_classes(df):
-    df = df[df['genre_grouped'] != 'other']
-    df = df[df['genre_grouped'] != 'comedy']  # opcional
+    df = df[df['genre_grouped'] != 'other'] 
     return df
 
 
@@ -72,9 +63,6 @@ def remove_unwanted_classes(df):
 # -----------------------------
 def split_features_target(df):
     X = df.drop(columns=[
-        'artist_name',
-        'track_name',
-        'track_id',
         'genre',
         'genre_grouped'
     ])
@@ -82,3 +70,12 @@ def split_features_target(df):
     y = df['genre_grouped']
     
     return X, y
+
+
+
+def preprocessing():
+    df = pd.read_csv("../data/processed/music_data_clean.csv")
+    df = apply_genre_grouping(df)
+    df = remove_unwanted_classes(df)
+    x, y = split_features_target(df)
+    return df.drop(columns=['genre']), x, y
