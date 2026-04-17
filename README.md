@@ -21,6 +21,82 @@ Este problema corresponde a una clasificaciónn de diferentes géneros, lo que i
 
 Adicionalmente, como medida secundaria utilizaremos el F1-score, para asegurarnos que el modelo sea equilibrado y que adicionalmente sea exacto cuando predice algo.
 
+# Cómo ejecutar el proyecto
+
+## 1. Clonar repositorio
+
+```bash
+git clone <URL_DEL_REPO>
+cd proyecto-ml
+```
+
+---
+
+## 2. Activar entorno
+
+```bash
+conda activate proyecto-ml
+```
+
+*(o crea uno si no tienes)*
+
+---
+
+## 3. Instalar dependencias
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 4. Verificar modelo
+
+Debe existir:
+
+```bash
+models/modelo_final_lightgbm_4clases.joblib
+```
+
+---
+
+## 5. Ejecutar la app
+
+```bash
+python -m streamlit run app/streamlit_app.py
+```
+
+Abrir en navegador:
+
+```
+http://localhost:8501
+```
+
+---
+
+## 6. Validación del modelo
+
+Notebook:
+
+```bash
+notebooks/08_validacion_modelo.ipynb
+```
+
+Incluye:
+
+* Curva ROC
+* AUC por clase
+* Métricas del modelo
+
+---
+
+## Detener app
+
+```bash
+Ctrl + C
+```
+
+
 ## Referencias
 
 Entrada de Blog (WIPO):
