@@ -13,6 +13,7 @@ header, #MainMenu, footer {
     visibility: hidden;
 }
 
+/* ===== TOP BAR ===== */
 .topbar {
     text-align: center;
     font-size: 0.95rem;
@@ -21,6 +22,7 @@ header, #MainMenu, footer {
     margin-bottom: 1.5rem;
 }
 
+/* ===== MAIN CARD ===== */
 .main-card {
     background: #d9d8cf;
     border-radius: 34px;
@@ -36,6 +38,7 @@ header, #MainMenu, footer {
     padding: 1rem 0.5rem 1rem 1rem;
 }
 
+/* ===== TITLES ===== */
 .section-title {
     font-size: 4rem;
     line-height: 0.95;
@@ -58,6 +61,7 @@ header, #MainMenu, footer {
     font-size: 0.95rem;
 }
 
+/* ===== VINYL ===== */
 .vinyl-wrap {
     display: flex;
     justify-content: center;
@@ -102,6 +106,7 @@ header, #MainMenu, footer {
     z-index: 3;
 }
 
+/* ===== TRACK BOX ===== */
 .track-box {
     background: #f6f4ee;
     border-radius: 22px;
@@ -116,6 +121,7 @@ header, #MainMenu, footer {
     color: #111111;
 }
 
+/* ===== CONTROLS ===== */
 .control-row {
     display: flex;
     gap: 0.8rem;
@@ -130,9 +136,9 @@ header, #MainMenu, footer {
     padding: 0.6rem 1rem;
     font-weight: 700;
     font-size: 0.95rem;
-    display: inline-block;
 }
 
+/* ===== PREDICTION ===== */
 .predict-card {
     background: #b8bea0;
     border-radius: 24px;
@@ -155,6 +161,7 @@ header, #MainMenu, footer {
     margin-top: 0.15rem;
 }
 
+/* ===== PLAYLIST ===== */
 .playlist-card {
     background: #b8bea0;
     border-radius: 18px;
@@ -166,7 +173,6 @@ header, #MainMenu, footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
 }
 
 .playlist-name {
@@ -181,16 +187,39 @@ header, #MainMenu, footer {
     font-weight: 600;
 }
 
+/* ===== SLIDERS ===== */
 div[data-baseweb="slider"] > div {
     color: #8c9274 !important;
 }
 
-.stSlider label,
-.stNumberInput label {
-    color: #222 !important;
-    font-weight: 600 !important;
+/* ===== INPUT LABELS (FIX DEFINITIVO) ===== */
+div[data-testid="stSelectbox"] label,
+div[data-testid="stSlider"] label,
+div[data-testid="stNumberInput"] label,
+div[data-testid="stSelectbox"] p,
+div[data-testid="stSlider"] p,
+div[data-testid="stNumberInput"] p {
+    color: #1a1a1a !important;
+    font-weight: 700 !important;
+    opacity: 1 !important;
 }
 
+/* ===== SELECTBOX ===== */
+div[data-testid="stSelectbox"] div[data-baseweb="select"] {
+    background-color: #232530 !important;
+    border-radius: 12px !important;
+    border: none !important;
+}
+
+div[data-testid="stSelectbox"] span {
+    color: #ffffff !important;
+}
+
+div[data-testid="stSelectbox"] svg {
+    fill: #ffffff !important;
+}
+
+/* ===== BUTTON ===== */
 .stButton > button {
     background-color: #111111;
     color: white;
@@ -202,5 +231,4 @@ div[data-baseweb="slider"] > div {
 
 .stButton > button:hover {
     background-color: #2a2a2a;
-    color: white;
 }
