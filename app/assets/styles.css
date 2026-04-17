@@ -1,0 +1,206 @@
+.stApp {
+    background-color: #efede5;
+    color: #111111;
+}
+
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-width: 1350px;
+}
+
+header, #MainMenu, footer {
+    visibility: hidden;
+}
+
+.topbar {
+    text-align: center;
+    font-size: 0.95rem;
+    letter-spacing: 0.18rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+.main-card {
+    background: #d9d8cf;
+    border-radius: 34px;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+.left-panel {
+    padding: 1rem 1rem 1rem 0.5rem;
+}
+
+.right-panel {
+    padding: 1rem 0.5rem 1rem 1rem;
+}
+
+.section-title {
+    font-size: 4rem;
+    line-height: 0.95;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    color: #111111;
+    margin-bottom: 0.5rem;
+}
+
+.mini-label {
+    font-size: 0.85rem;
+    letter-spacing: 0.08rem;
+    color: #6a6a62;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+}
+
+.subtle-text {
+    color: #5e5e57;
+    font-size: 0.95rem;
+}
+
+.vinyl-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1.8rem;
+}
+
+.vinyl {
+    width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at center, #111 0 18%, #1a1a1a 19% 28%, #0f0f0f 29% 38%, #1a1a1a 39% 48%, #0e0e0e 49% 58%, #181818 59% 68%, #0c0c0c 69% 78%, #151515 79% 100%);
+    position: relative;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+    overflow: hidden;
+}
+
+.cover-art {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.22);
+    z-index: 2;
+}
+
+.vinyl-hole {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #f4f1e8;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.track-box {
+    background: #f6f4ee;
+    border-radius: 22px;
+    padding: 1rem 1.2rem;
+    margin-top: 1rem;
+}
+
+.track-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    color: #111111;
+}
+
+.control-row {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.control-pill {
+    background: #b8bea0;
+    color: #111111;
+    border-radius: 999px;
+    padding: 0.6rem 1rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: inline-block;
+}
+
+.predict-card {
+    background: #b8bea0;
+    border-radius: 24px;
+    padding: 1rem 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.predict-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #4d533f;
+    letter-spacing: 0.08rem;
+}
+
+.predict-genre {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #111111;
+    margin-top: 0.15rem;
+}
+
+.playlist-card {
+    background: #b8bea0;
+    border-radius: 18px;
+    padding: 0.9rem 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.playlist-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.playlist-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111111;
+}
+
+.playlist-prob {
+    font-size: 0.95rem;
+    color: #2f3326;
+    font-weight: 600;
+}
+
+div[data-baseweb="slider"] > div {
+    color: #8c9274 !important;
+}
+
+.stSlider label,
+.stNumberInput label {
+    color: #222 !important;
+    font-weight: 600 !important;
+}
+
+.stButton > button {
+    background-color: #111111;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 0.7rem 1.3rem;
+    font-weight: 700;
+}
+
+.stButton > button:hover {
+    background-color: #2a2a2a;
+    color: white;
+}
