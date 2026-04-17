@@ -1,4 +1,4 @@
-from imblearn.pipeline import Pipeline  # 🔥 IMPORTANTE
+from imblearn.pipeline import Pipeline  # CORREGIDO: antes era sklearn.pipeline
 from sklearn.ensemble import GradientBoostingClassifier
 from imblearn.over_sampling import SMOTE
 
@@ -11,12 +11,14 @@ def train_gradient_boosting_model(X, y):
 
     model = Pipeline(steps=[
         ('preprocessor', preprocessor),
-        ('smote', SMOTE(random_state=42)),
+        ('smote', SMOTE(sampling_strategy='not majority', k_neighbors=3, random_state=42)),
         ('classifier', GradientBoostingClassifier(
-            n_estimators=150,
-            learning_rate=0.1,
-            max_depth=3,
+            n_estimators=200,
+            learning_rate=0.08,
+            max_depth=4,
             subsample=0.8,
+            min_samples_leaf=5,
+            max_features='sqrt',
             random_state=42
         ))
     ])
